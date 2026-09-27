@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K8 map berkas, bukti absen</title>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;family=Schibsted+Grotesk:wght@800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes k8-stack{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:none}}
+@keyframes k8-tab{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes k8-paper{from{transform:translateY(150px)}to{transform:none}}
+@keyframes k8-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes k8-scan{from{transform:translateY(0)}to{transform:translateY(170px)}}
+@keyframes k8-pulse{0%{box-shadow:0 0 0 0 rgba(188,132,32,0.5)}70%,100%{box-shadow:0 0 0 10px rgba(188,132,32,0)}}
+@keyframes k8-up{from{transform:translateY(100%)}to{transform:none}}
+@keyframes k8-draw{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 4px; padding: 12px 20px 0 8px">
+<a href="L-K8-Beranda.html" aria-label="Kembali ke map" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #163A2E"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<span style="flex-grow: 1; font-size: 15px; color: #6B6154">Absen masuk</span>
+</header>
+
+<section aria-label="Bukti absen" style="position: relative; margin: 16px 16px 0; height: 610px">
+<div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: column; animation: k8-stack 0.5s cubic-bezier(.2,.8,.2,1) both">
+<span style="align-self: flex-start; height: 36px; box-sizing: border-box; padding: 0 14px; background: #163A2E; color: #FBF6EE; border-radius: 12px 12px 0 0; display: flex; align-items: center; gap: 6px; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 15px; font-weight: 800; animation: k8-tab 0.4s ease-out 0.20s both"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Tercatat</span>
+<div style="flex-grow: 1; background: #163A2E; border-radius: 0 20px 20px 20px"></div>
+</div>
+<article style="position: absolute; left: 14px; right: 14px; top: 52px; background: #FFFFFF; border-radius: 12px; padding: 18px 18px 120px; display: flex; flex-direction: column; box-shadow: 0 -2px 10px rgba(22,58,46,0.15); animation: k8-paper 0.8s cubic-bezier(.2,.8,.2,1) 0.45s both">
+<div style="display: flex; align-items: center; gap: 8px; padding-bottom: 12px; border-bottom: 1px solid #E7DBC8">
+<span style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 18px; font-weight: 800; letter-spacing: -0.03em">NEP<span style="color: #A34526">.</span></span>
+<span style="margin-left: auto; font-size: 13px; color: #6B6154">Andi Siregar · PN-0142</span>
+</div>
+<span style="margin-top: 14px; font-size: 13px; font-weight: 700; color: #6B6154">Absen masuk tercatat</span>
+<h1 style="margin: 0 0 8px; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 64px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums">06.52</h1>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; font-size: 15px"><span style="color: #6B6154">Tanggal</span><span style="font-weight: 700; text-align: right">Senin, 28 Sep 2026</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid #E7DBC8; font-size: 15px"><span style="color: #6B6154">Lokasi</span><span style="font-weight: 700; text-align: right">Gedung Kantor Diponegoro</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid #E7DBC8; font-size: 15px"><span style="color: #6B6154">Jarak</span><span style="font-weight: 700; text-align: right">38 m dari titik site</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid #E7DBC8; font-size: 15px"><span style="color: #6B6154">Kode</span><span style="font-weight: 700; text-align: right">AB-7F3C-91D2</span></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid #E7DBC8; font-size: 15px"><span style="color: #6B6154">Status</span><span style="font-weight: 700; text-align: right"><span style="display: inline-flex; align-items: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BC8420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M11 18h2"></path></svg>Di HP, menunggu sinyal</span></span></div>
+</article>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: 150px; background: #255F4A; border-radius: 20px; box-shadow: 0 -6px 16px rgba(22,58,46,0.25); display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; box-sizing: border-box; gap: 8px; animation: k8-stack 0.5s cubic-bezier(.2,.8,.2,1) 0.1s both">
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #FBF6EE">Bukti ini tersimpan di map. Jam resmi dicatat server begitu terkirim.</p>
+<a href="L-K8-Beranda.html" style="height: 52px; border-radius: 14px; background: #FBF6EE; color: #163A2E; text-decoration: none; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700">Kembali ke map</a>
+</div>
+</section>
+</div>
+</div>
+<script src="dc-lite.js"></script>
+</body>
+</html>

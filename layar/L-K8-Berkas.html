@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K8 map berkas, berkas saya</title>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes k8-stack{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:none}}
+@keyframes k8-tab{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes k8-paper{from{transform:translateY(150px)}to{transform:none}}
+@keyframes k8-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes k8-scan{from{transform:translateY(0)}to{transform:translateY(170px)}}
+@keyframes k8-pulse{0%{box-shadow:0 0 0 0 rgba(188,132,32,0.5)}70%,100%{box-shadow:0 0 0 10px rgba(188,132,32,0)}}
+@keyframes k8-up{from{transform:translateY(100%)}to{transform:none}}
+@keyframes k8-draw{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width: 390px; height: 860px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 4px; padding: 12px 16px 0 8px">
+<a href="L-K8-Beranda.html" aria-label="Kembali ke map" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #163A2E"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+</header>
+<section style="padding: 4px 20px 14px; display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 30px; font-weight: 800; line-height: 1.1">Berkas saya</h1>
+<span style="font-size: 14px; line-height: 1.45; color: #6B6154">Disimpan HRD NEP. Kamu bisa melihat dan mengunduh, perubahan lewat HRD.</span>
+</section>
+
+<div role="tablist" aria-label="Jenis berkas" style="display: flex; gap: 6px; padding: 0 16px 14px; overflow: hidden">
+<button type="button" role="tab" aria-selected="true" style="flex-shrink: 0; height: 38px; padding: 0 14px; border: 0; border-radius: 10px 10px 0 0; background: #163A2E; color: #FBF6EE; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 15px; font-weight: 800; animation: k8-tab 0.35s ease-out 0.05s both">Semua 7</button>
+<button type="button" role="tab" aria-selected="false" style="flex-shrink: 0; height: 38px; padding: 0 14px; border: 0; border-radius: 10px 10px 0 0; background: #F4EBDC; color: #163A2E; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 15px; font-weight: 700; animation: k8-tab 0.35s ease-out 0.11s both">Kontrak</button>
+<button type="button" role="tab" aria-selected="false" style="flex-shrink: 0; height: 38px; padding: 0 14px; border: 0; border-radius: 10px 10px 0 0; background: #F4EBDC; color: #163A2E; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 15px; font-weight: 700; animation: k8-tab 0.35s ease-out 0.17s both">Identitas</button>
+<button type="button" role="tab" aria-selected="false" style="flex-shrink: 0; height: 38px; padding: 0 14px; border: 0; border-radius: 10px 10px 0 0; background: #F4EBDC; color: #163A2E; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 15px; font-weight: 700; animation: k8-tab 0.35s ease-out 0.23s both">BPJS</button>
+</div>
+
+<ul style="margin: 0 16px; padding: 0; list-style: none; background: #FFFFFF; border: 1px solid #E7DBC8; border-radius: 0 16px 16px 16px; display: flex; flex-direction: column; animation: k8-paper 0.7s cubic-bezier(.2,.8,.2,1) 0.2s both">
+<li style="display: flex; align-items: center; gap: 12px; padding: 14px 16px">
+<span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: #F4EBDC; color: #255F4A; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M10 13h6M10 17h4"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700; line-height: 1.35">Kontrak kerja PKWT</span><span style="font-size: 13px; line-height: 1.35; color: #6B6154; font-variant-numeric: tabular-nums">1 Mar 2026 sampai 28 Feb 2027</span></span>
+<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: #255F4A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Aktif</span>
+</li>
+<li style="display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-top: 1px solid #E7DBC8; background: #F4EBDC">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: #FFFFFF; color: #163A2E; display: flex; align-items: center; justify-content: center; animation: k8-pulse 1.8s ease-out 1s 3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700; line-height: 1.35">SKCK</span><span style="font-size: 13px; line-height: 1.35; color: #6B6154">Berlaku sampai 3 Nov 2026</span></span>
+<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BC8420" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg>36 hari lagi</span>
+</div>
+<a href="#" style="align-self: flex-start; margin-left: 52px; display: flex; align-items: center; height: 40px; padding: 0 14px; border-radius: 10px; background: #255F4A; color: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700">Unggah SKCK baru</a>
+</li>
+<li style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid #E7DBC8">
+<span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: #F4EBDC; color: #255F4A; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2"></rect><circle cx="9" cy="12" r="2"></circle><path d="M13 11h4M13 14h3"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700; line-height: 1.35">Kartu tanda anggota satpam</span><span style="font-size: 13px; line-height: 1.35; color: #6B6154">Berlaku sampai 12 Jan 2027</span></span>
+<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: #255F4A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Aktif</span>
+</li>
+<li style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid #E7DBC8">
+<span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: #F4EBDC; color: #255F4A; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"></circle><path d="M9 13.5L7.5 21l4.5-2.5 4.5 2.5-1.5-7.5"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700; line-height: 1.35">Sertifikat Gada Pratama</span><span style="font-size: 13px; line-height: 1.35; color: #6B6154">Pelatihan dasar satpam</span></span>
+<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: #255F4A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Ada</span>
+</li>
+<li style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid #E7DBC8">
+<span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: #F4EBDC; color: #255F4A; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4.5-2.5-8-6-8-10.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 8 2.5C20 15 16.5 18.5 12 21z"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700; line-height: 1.35">BPJS Kesehatan</span><span style="font-size: 13px; line-height: 1.35; color: #6B6154">Didaftarkan lewat NEP</span></span>
+<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: #255F4A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Aktif</span>
+</li>
+<li style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid #E7DBC8">
+<span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: #F4EBDC; color: #255F4A; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10z"></path><path d="M9 20v-6h6v6"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700; line-height: 1.35">BPJS Ketenagakerjaan</span><span style="font-size: 13px; line-height: 1.35; color: #6B6154">JHT, JKK, JKM, pensiun</span></span>
+<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: #255F4A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Aktif</span>
+</li>
+<li style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid #E7DBC8">
+<span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: #163A2E; color: #FBF6EE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700; line-height: 1.35">Persetujuan foto dan lokasi</span><span style="font-size: 13px; line-height: 1.35; color: #6B6154">Versi 1.2, disetujui 2 Mar 2026</span></span>
+<a href="#" style="font-size: 13px; font-weight: 700; min-height: 44px; display: flex; align-items: center">Atur</a>
+</li>
+</ul>
+
+<p style="margin: 14px 24px 0; font-size: 13px; line-height: 1.5; color: #6B6154">Persetujuan bisa ditarik kapan saja. Absen tetap bisa dengan PIN.</p>
+
+<nav aria-label="Menu utama" style="margin-top: auto; height: 68px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E7DBC8; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); animation: k8-up 0.5s cubic-bezier(.2,.8,.2,1) 0.1s both">
+<a href="L-K8-Beranda.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"></path></svg></span>Map</a>
+<a href="L-K8-Slip.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg></span>Gaji</a>
+<a href="L-K8-Berkas.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #163A2E; font-size: 13px; font-weight: 800"><span style="width: 52px; height: 28px; border-radius: 8px 8px 0 0; background: #163A2E; color: #FBF6EE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path></svg></span>Berkas</a>
+<a href="L-K8-Akun.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></span>Akun</a>
+</nav>
+</div>
+</div>
+<script src="dc-lite.js"></script>
+</body>
+</html>

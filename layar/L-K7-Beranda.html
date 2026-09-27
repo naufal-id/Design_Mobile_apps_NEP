@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K7 radar lokasi, beranda</title>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,400..900&amp;family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EAF3EE;font-family:"Onest",ui-sans-serif,system-ui,sans-serif;color:#14332A}
+a{color:#2C6A55}a:hover{color:#14332A}
+@keyframes k7-sweep{to{transform:rotate(360deg)}}
+@keyframes k7-ping{0%{transform:scale(0.6);opacity:0.9}100%{transform:scale(2.8);opacity:0}}
+@keyframes k7-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes k7-pop{0%{opacity:0;transform:scale(0.3)}70%{opacity:1;transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
+@keyframes k7-fade{from{opacity:0}to{opacity:1}}
+@keyframes k7-wide{from{opacity:0;font-stretch:75%}to{opacity:1;font-stretch:125%}}
+@keyframes k7-up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #EAF3EE; color: #14332A; font-family: 'Onest', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 10px; padding: 16px 20px 8px">
+<span style="font-family: 'Mona Sans', sans-serif; font-stretch: 125%; font-size: 22px; font-weight: 900; line-height: 1; letter-spacing: -0.02em">NEP<span style="color: #4A6FA5">.</span></span>
+<span style="margin-left: auto; font-size: 14px; color: #667069">Senin, 28 Sep · 06.48</span>
+<span style="width: 40px; height: 40px; border-radius: 14px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">AS</span>
+</header>
+
+<section style="padding: 12px 20px 16px; display: flex; flex-direction: column; gap: 6px">
+<h1 style="margin: 0; font-family: 'Mona Sans', sans-serif; font-stretch: 125%; font-size: 36px; font-weight: 850; line-height: 0.95; letter-spacing: -0.025em; animation: k7-wide 0.8s cubic-bezier(.2,.8,.2,1) 0.05s both">Kamu sudah<br>di area kerja</h1>
+<span style="font-size: 15px; line-height: 1.45; color: #667069">Gedung Kantor Diponegoro · shift pagi 07.00</span>
+</section>
+
+<section aria-label="Radar area kerja" style="margin: 0 16px; background: #14332A; border-radius: 32px; overflow: hidden; position: relative; animation: k7-rise 0.6s cubic-bezier(.2,.8,.2,1) 0.15s both">
+<svg width="358" height="300" viewBox="0 0 358 300" role="img" aria-label="Posisi kamu 38 meter dari titik site, di dalam radius 100 meter" style="display: block">
+<circle cx="179" cy="150" r="40" fill="none" stroke="rgba(234,243,238,0.14)" stroke-width="1.5"></circle>
+<circle cx="179" cy="150" r="80" fill="none" stroke="rgba(234,243,238,0.14)" stroke-width="1.5"></circle>
+<circle cx="179" cy="150" r="120" fill="rgba(44,106,85,0.35)" stroke="#EAF3EE" stroke-width="2" stroke-dasharray="6 7" style="transform-origin: 179px 150px; animation: k7-pop 0.7s cubic-bezier(.3,1.2,.5,1) 0.35s both"></circle>
+<g style="transform-origin: 179px 150px; animation: k7-sweep 4s linear 0.6s infinite"><path d="M179 150 L179 -10 A160 160 0 0 1 292.1 36.9 Z" fill="rgba(234,243,238,0.06)"></path><path d="M179 150 L179 -10 A160 160 0 0 1 233.7 -0.4 Z" fill="rgba(234,243,238,0.08)"></path></g>
+<circle cx="179" cy="150" r="160" fill="none" stroke="rgba(234,243,238,0.08)" stroke-width="1.5"></circle>
+<path d="M179 150 L179 30" stroke="rgba(234,243,238,0.10)" stroke-width="1.5"></path>
+<path d="M59 150 L299 150" stroke="rgba(234,243,238,0.10)" stroke-width="1.5"></path>
+<circle cx="305.5" cy="47.9" r="3.5" fill="rgba(234,243,238,0.18)" style="animation: k7-fade 0.4s ease-out 0.60s both"></circle>
+<circle cx="288.9" cy="61.2" r="4.1" fill="rgba(234,243,238,0.32)" style="animation: k7-fade 0.4s ease-out 0.72s both"></circle>
+<circle cx="272.2" cy="74.4" r="4.7" fill="rgba(234,243,238,0.46)" style="animation: k7-fade 0.4s ease-out 0.84s both"></circle>
+<circle cx="255.5" cy="87.6" r="5.3" fill="rgba(234,243,238,0.60)" style="animation: k7-fade 0.4s ease-out 0.96s both"></circle>
+<circle cx="241.0" cy="99.2" r="5.9" fill="rgba(234,243,238,0.74)" style="animation: k7-fade 0.4s ease-out 1.08s both"></circle>
+<rect x="171" y="142" width="16" height="16" rx="5" fill="#EAF3EE" transform="rotate(45 179 150)"></rect>
+<circle cx="213.9" cy="120.7" r="9" fill="none" stroke="#EAF3EE" stroke-width="2" style="transform-origin: 213.9px 120.7px; animation: k7-ping 2.2s ease-out 1.4s infinite"></circle>
+<circle cx="213.9" cy="120.7" r="18" fill="rgba(74,111,165,0.35)"></circle>
+<circle cx="213.9" cy="120.7" r="9" fill="#FFFFFF" stroke="#4A6FA5" stroke-width="4" style="transform-origin: 213.9px 120.7px; animation: k7-pop 0.5s cubic-bezier(.3,1.4,.5,1) 1.2s both"></circle>
+<path d="M179 150 L213.9 120.7" stroke="#EAF3EE" stroke-width="1.5" stroke-dasharray="3 4"></path>
+</svg>
+<span style="position: absolute; left: 232px; top: 134px; font-size: 13px; font-weight: 700; color: #14332A; background: #FFFFFF; border-radius: 999px; padding: 4px 10px; animation: k7-pop 0.4s ease-out 1.35s both">Kamu · 38 m</span>
+<span style="position: absolute; left: 16px; top: 16px; font-size: 13px; font-weight: 600; color: #EAF3EE; background: rgba(234,243,238,0.12); border-radius: 999px; padding: 4px 10px; animation: k7-fade 0.4s ease-out 0.7s both">Radius site 100 m</span>
+<span style="position: absolute; right: 16px; bottom: 16px; font-size: 13px; font-weight: 600; color: #EAF3EE; background: rgba(234,243,238,0.12); border-radius: 999px; padding: 4px 10px; animation: k7-fade 0.4s ease-out 0.8s both">Akurasi 12 m</span>
+<span style="position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #EAF3EE"><span aria-hidden="true" style="width: 10px; height: 10px; background: #EAF3EE; border-radius: 3px; transform: rotate(45deg)"></span>Titik site</span>
+</section>
+
+<div style="padding: 16px 16px 0; display: flex; flex-direction: column; gap: 4px; animation: k7-rise 0.45s ease-out 1s both">
+<a href="L-K7-Absen.html" style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 60px; border-radius: 999px; background: #2C6A55; color: #FFFFFF; text-decoration: none; font-family: 'Mona Sans', sans-serif; font-stretch: 110%; font-size: 18px; font-weight: 750"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>Absen masuk</a>
+<a href="#" style="align-self: center; min-height: 44px; display: flex; align-items: center; font-size: 15px; font-weight: 600">Tidak bisa foto? Pakai PIN</a>
+</div>
+
+<div style="padding: 4px 16px 0; display: flex; gap: 8px; flex-wrap: wrap; animation: k7-rise 0.45s ease-out 1.1s both">
+<span role="status" style="display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border-radius: 999px; background: #EDF1F7; font-size: 13px; font-weight: 600"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A6FA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20v-3M9 20v-6M14 20v-9M19 20V5"></path><path d="M3 4l18 16"></path></svg>Offline, 1 absen antre</span>
+<a href="L-K7-Izin.html" style="display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border-radius: 999px; background: #FFFFFF; color: #14332A; text-decoration: none; font-size: 13px; font-weight: 600">Sisa cuti 9 hari<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</div>
+
+<nav aria-label="Menu utama" style="margin: auto 16px 16px; height: 64px; flex-shrink: 0; background: #FFFFFF; border-radius: 999px; padding: 6px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; animation: k7-up 0.5s cubic-bezier(.2,.8,.2,1) 0.15s both">
+<a href="L-K7-Beranda.html" aria-current="page" style="display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 999px; background: #14332A; color: #EAF3EE; text-decoration: none; font-size: 14px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle></svg>Radar</a>
+<a href="L-K7-Slip.html" style="display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 999px; color: #14332A; text-decoration: none; font-size: 14px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg>Gaji</a>
+<a href="L-K7-Akun.html" style="display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 999px; color: #14332A; text-decoration: none; font-size: 14px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>Saya</a>
+</nav>
+</div>
+</div>
+<script src="dc-lite.js"></script>
+</body>
+</html>

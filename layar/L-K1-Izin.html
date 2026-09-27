@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K1 sampul hijau, ajukan izin</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Schibsted+Grotesk:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EAF3EE;font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif;color:#14332A}
+a{color:#2C6A55}a:hover{color:#14332A}
+@keyframes k1-cover{from{transform:translateY(-70px);border-radius:0 0 160px 160px}to{transform:none;border-radius:0 0 28px 28px}}
+@keyframes k1-rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes k1-pick{0%{transform:scale(0.92)}60%{transform:scale(1.04)}100%{transform:scale(1)}}
+@keyframes k1-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="width: 390px; height: 980px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #EAF3EE; color: #14332A; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif">
+
+<header style="background: #14332A; color: #FFFFFF; padding: 12px 20px 60px 8px; border-radius: 0 0 28px 28px; display: flex; flex-direction: column; gap: 10px; animation: k1-cover 0.7s cubic-bezier(.2,.8,.2,1) both">
+<div style="display: flex; align-items: center; gap: 4px">
+<a href="L-K1-Beranda.html" aria-label="Kembali" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #FFFFFF"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<h1 style="margin: 0; flex-grow: 1; font-family: 'Schibsted Grotesk', 'Public Sans', sans-serif; font-size: 20px; font-weight: 700">Ajukan izin</h1>
+</div>
+<sc-if value="{{ isCuti }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding-left: 12px; font-size: 14px; line-height: 1.45; color: #EAF3EE">Memakai 1 hari cuti tahunan. Sisa jadi 8 dari 9 hari.</p></sc-if>
+<sc-if value="{{ notCuti }}" hint-placeholder-val="{{ true }}"><p style="margin: 0; padding-left: 12px; font-size: 14px; line-height: 1.45; color: #EAF3EE">Sisa cuti tahunan 9 hari, ikut kamu walau pindah penempatan.</p></sc-if>
+</header>
+
+<form style="margin: -40px 16px 0; background: #FFFFFF; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 10px 28px rgba(20,51,42,0.14); animation: k1-rise 0.6s cubic-bezier(.2,.8,.2,1) 0.2s both">
+<fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 8px">
+<legend style="padding: 0; margin-bottom: 8px; font-size: 14px; font-weight: 600; color: #667069">Jenis</legend>
+<div role="radiogroup" aria-label="Jenis izin" style="display: flex; gap: 8px">
+<sc-for list="{{ jenis }}" as="j" hint-placeholder-count="3">
+<sc-if value="{{ j.on }}" hint-placeholder-val="{{ false }}"><button type="button" role="radio" aria-checked="true" onClick="{{ j.pick }}" style="flex: 1 1 0; height: 48px; border: 0; border-radius: 14px; background: #2C6A55; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 6px; font-family: inherit; font-size: 15px; font-weight: 700; animation: k1-pick 0.35s cubic-bezier(.3,1.4,.5,1) both"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>{{ j.label }}</button></sc-if>
+<sc-if value="{{ j.off }}" hint-placeholder-val="{{ true }}"><button type="button" role="radio" aria-checked="false" onClick="{{ j.pick }}" style="flex: 1 1 0; height: 48px; border: 1.5px solid #E5EAE7; border-radius: 14px; background: #FFFFFF; color: #14332A; font-family: inherit; font-size: 15px; font-weight: 600">{{ j.label }}</button></sc-if>
+</sc-for>
+</div>
+</fieldset>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px; font-weight: 600; color: #667069">Tanggal</span>
+<div style="display: flex; gap: 8px">
+<button type="button" style="flex-grow: 1; height: 52px; border: 1.5px solid #E5EAE7; border-radius: 14px; background: #FFFFFF; padding: 0 14px; display: flex; align-items: center; gap: 10px; font-family: inherit; font-size: 15px; font-weight: 600; color: #14332A"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2C6A55" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></svg>Selasa, 29 Sep 2026</button>
+<span style="height: 52px; box-sizing: border-box; border-radius: 14px; background: #EAF3EE; padding: 0 14px; display: flex; align-items: center; font-size: 15px; font-weight: 700">1 hari</span>
+</div>
+</div>
+
+<label style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; font-weight: 600; color: #667069">Keterangan</span><textarea rows="3" style="border: 1.5px solid #E5EAE7; border-radius: 14px; padding: 12px 14px; font-family: inherit; font-size: 15px; line-height: 1.45; color: #14332A; resize: none">Demam sejak semalam, sudah periksa ke puskesmas.</textarea></label>
+
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 14px; font-weight: 600; color: #667069">Lampiran</span>
+<div style="display: flex; align-items: center; gap: 12px; border: 1.5px dashed #2C6A55; border-radius: 14px; padding: 10px 12px">
+<span style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 12px; background: #EAF3EE; color: #2C6A55; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Foto surat dokter</span><span style="font-size: 13px; color: #667069">{{ lampiranNote }}</span></span>
+<button type="button" style="height: 40px; padding: 0 14px; border: 0; border-radius: 999px; background: #EAF3EE; font-family: inherit; font-size: 14px; font-weight: 700; color: #2C6A55">Tambah</button>
+</div>
+</div>
+</form>
+
+<section style="margin: 16px 16px 0; background: #FFFFFF; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; gap: 12px; animation: k1-rise 0.6s cubic-bezier(.2,.8,.2,1) 0.4s both">
+<h2 style="margin: 0; font-size: 14px; font-weight: 600; color: #667069">Alur persetujuan</h2>
+<div style="display: flex; align-items: center; gap: 8px">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600"><span style="width: 32px; height: 32px; border-radius: 999px; background: #14332A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">RH</span>Koordinator</span>
+<span aria-hidden="true" style="flex-grow: 1; height: 2px; background: #2C6A55; transform-origin: left; animation: k1-line 0.6s ease-out 0.9s both"></span>
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600"><span style="width: 32px; height: 32px; border-radius: 999px; background: #EAF3EE; color: #2C6A55; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">HR</span>HRD</span>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #667069">Rizky Harahap menyiapkan pengganti untuk shift kamu, lalu HRD mencatatnya.</p>
+</section>
+
+<div style="margin: 16px 16px 0; display: flex; flex-direction: column; gap: 10px; animation: k1-rise 0.6s cubic-bezier(.2,.8,.2,1) 0.55s both">
+<button type="button" style="height: 56px; border: 0; border-radius: 14px; background: #2C6A55; color: #FFFFFF; font-family: inherit; font-size: 17px; font-weight: 700">Kirim pengajuan</button>
+<div style="display: flex; align-items: center; justify-content: space-between; font-size: 14px"><span style="color: #667069">Sebelumnya: Izin, Rab 16 Sep</span><span style="display: inline-flex; align-items: center; gap: 4px; font-weight: 700; color: #2C6A55"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Disetujui</span></div>
+</div>
+
+<nav aria-label="Menu utama" style="margin-top: auto; height: 72px; flex-shrink: 0; background: #FFFFFF; border-radius: 24px 24px 0 0; box-shadow: 0 -4px 16px rgba(20,51,42,0.06); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr))">
+<a href="L-K1-Beranda.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #667069; font-size: 13px; font-weight: 600"><span style="height: 30px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"></path><path d="M6 10v10h12V10"></path></svg></span>Beranda</a>
+<a href="L-K1-Slip.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #667069; font-size: 13px; font-weight: 600"><span style="height: 30px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg></span>Slip</a>
+<a href="L-K1-Izin.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #2C6A55; font-size: 13px; font-weight: 700"><span style="width: 56px; height: 30px; border-radius: 999px; background: #EAF3EE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></svg></span>Izin</a>
+<a href="L-K1-Akun.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #667069; font-size: 13px; font-weight: 600"><span style="height: 30px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></span>Akun</a>
+</nav>
+</div>
+</template>
+<script type="text/plain" id="dc-logic">
+class Component extends DCLogic {
+renderVals() {
+const picked = (this.state && this.state.jenis) || 'sakit';
+const opts = [
+{ id: 'sakit', label: 'Sakit', note: 'Dianjurkan untuk izin sakit' },
+{ id: 'izin', label: 'Izin', note: 'Tidak wajib' },
+{ id: 'cuti', label: 'Cuti', note: 'Tidak perlu untuk cuti' }
+];
+const current = opts.find((o) => o.id === picked) || opts[0];
+return {
+jenis: opts.map((o) => ({ label: o.label, on: o.id === picked, off: o.id !== picked, pick: () => this.setState({ jenis: o.id }) })),
+isCuti: picked === 'cuti',
+notCuti: picked !== 'cuti',
+lampiranNote: current.note
+};
+}
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

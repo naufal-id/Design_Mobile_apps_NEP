@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T3 bulat ramah, akun</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;family=Nunito:wght@400..900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Nunito",ui-rounded,ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes t3-pop{0%{opacity:0;transform:scale(0.5)}60%{opacity:1;transform:scale(1.08)}80%{transform:scale(0.97)}100%{opacity:1;transform:scale(1)}}
+@keyframes t3-squish{0%{opacity:0;transform:translateY(40px) scale(0.9,1.1)}60%{opacity:1;transform:translateY(-6px) scale(1.03,0.97)}100%{opacity:1;transform:none}}
+@keyframes t3-bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-8px)}60%{transform:translateY(0)}75%{transform:translateY(-3px)}}
+@keyframes t3-blob{0%,100%{border-radius:48% 52% 55% 45% / 50% 45% 55% 50%}50%{border-radius:55% 45% 48% 52% / 45% 55% 50% 50%}}
+@keyframes t3-wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+@keyframes t3-burst{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(0.4)}}
+@keyframes t3-draw{from{stroke-dashoffset:30}to{stroke-dashoffset:0}}
+@keyframes t3-up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width: 390px; height: 720px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Nunito', ui-rounded, ui-sans-serif, system-ui, sans-serif">
+
+<section style="margin: 16px 16px 0; background: #255F4A; color: #FBF6EE; border-radius: 36px; padding: 22px 20px; display: flex; align-items: center; gap: 16px; animation: t3-squish 0.7s cubic-bezier(.3,1.4,.5,1) both">
+<span style="width: 72px; height: 72px; flex-shrink: 0; border-radius: 999px; background: #FBF6EE; color: #163A2E; display: flex; align-items: center; justify-content: center; font-family: 'Baloo 2', sans-serif; font-size: 26px; font-weight: 800; animation: t3-bounce 0.9s ease-out 0.5s both">AS</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><h1 style="margin: 0; font-family: 'Baloo 2', sans-serif; font-size: 26px; font-weight: 800; line-height: 1.1">Andi Siregar</h1><span style="font-size: 14px; font-weight: 700; color: #F4EBDC">Satpam · PN-0142</span><span style="font-size: 14px; font-weight: 700; color: #F4EBDC">Gedung Kantor Diponegoro</span></span>
+</section>
+
+<div style="margin: 12px 16px 0; display: flex; flex-direction: column; gap: 8px">
+<a href="L-T3-Riwayat.html" style="background: #FFFFFF; border-radius: 24px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #163A2E; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.35s both"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Baloo 2', sans-serif; font-size: 18px; font-weight: 700; line-height: 1.2">Riwayat absen</span><span style="font-size: 13px; font-weight: 700; line-height: 1.4; color: #6B6154">22 hadir bulan ini</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6154" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<div style="background: #FFFFFF; border-radius: 24px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #163A2E; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.42s both"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Baloo 2', sans-serif; font-size: 18px; font-weight: 700; line-height: 1.2">HP ini</span><span style="font-size: 13px; font-weight: 700; line-height: 1.4; color: #6B6154">Terdaftar atas nama kamu</span></span><span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 800; color: #FFFFFF; background: #255F4A; border-radius: 999px; padding: 5px 10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Aktif</span></div>
+<a href="#" style="background: #FFFFFF; border-radius: 24px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #163A2E; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.49s both"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Baloo 2', sans-serif; font-size: 18px; font-weight: 700; line-height: 1.2">Ganti HP</span><span style="font-size: 13px; font-weight: 700; line-height: 1.4; color: #6B6154">Ajukan ke HRD dulu, ya</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6154" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="#" style="background: #FFFFFF; border-radius: 24px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #163A2E; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.56s both"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Baloo 2', sans-serif; font-size: 18px; font-weight: 700; line-height: 1.2">PIN absen</span><span style="font-size: 13px; font-weight: 700; line-height: 1.4; color: #6B6154">Cadangan kalau foto gagal</span></span><span style="font-size: 14px; font-weight: 800; color: #255F4A">Ubah</span></a>
+<a href="#" style="background: #F4EBDC; border-radius: 24px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: #163A2E; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.63s both"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Baloo 2', sans-serif; font-size: 18px; font-weight: 700; line-height: 1.2">Foto dan lokasi</span><span style="font-size: 13px; font-weight: 700; line-height: 1.4; color: #6B6154">Kamu setuju versi 1.2, 2 Mar 2026. Bisa ditarik kapan saja.</span></span><span style="font-size: 14px; font-weight: 800; color: #255F4A">Atur</span></a>
+</div>
+
+<a href="#" style="align-self: center; min-height: 44px; margin-top: 6px; display: flex; align-items: center; font-size: 15px; font-weight: 800">Keluar dari aplikasi</a>
+
+<nav aria-label="Menu utama" style="margin: auto 16px 18px; height: 64px; flex-shrink: 0; border-radius: 999px; background: #FFFFFF; box-shadow: 0 6px 18px rgba(22,58,46,0.12); padding: 6px; box-sizing: border-box; display: grid; grid-template-columns: 1fr 1fr 1fr 1.3fr; gap: 4px; font-size: 14px; font-weight: 800; animation: t3-up 0.5s cubic-bezier(.3,1.4,.5,1) 0.15s both">
+<a href="L-T3-Beranda.html" style="border-radius: 999px; color: #163A2E; text-decoration: none; display: flex; align-items: center; justify-content: center">Hari ini</a>
+<a href="L-T3-Slip.html" style="border-radius: 999px; color: #163A2E; text-decoration: none; display: flex; align-items: center; justify-content: center">Gaji</a>
+<a href="L-T3-Izin.html" style="border-radius: 999px; color: #163A2E; text-decoration: none; display: flex; align-items: center; justify-content: center">Izin</a>
+<a href="L-T3-Akun.html" aria-current="page" style="border-radius: 999px; background: #163A2E; color: #FBF6EE; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.4s both"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>Akun</a>
+</nav>
+</div>
+</div>
+<script src="dc-lite.js"></script>
+</body>
+</html>

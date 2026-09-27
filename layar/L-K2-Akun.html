@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K2 kartu pekerja, akun</title>
+<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;family=Schibsted+Grotesk:wght@800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes k2-flip{from{opacity:0;transform:perspective(900px) rotateY(-70deg) translateX(-40px)}to{opacity:1;transform:perspective(900px) rotateY(0)}}
+@keyframes k2-sheen{0%{transform:translateX(-140%) skewX(-18deg)}35%,100%{transform:translateX(420%) skewX(-18deg)}}
+@keyframes k2-rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes k2-up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="width: 390px; height: 1000px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 8px; padding: 16px 20px 12px">
+<h1 style="margin: 0; flex-grow: 1; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 22px; font-weight: 700">Akun</h1>
+<span style="font-family: 'Schibsted Grotesk', 'Public Sans', sans-serif; font-size: 22px; font-weight: 800; line-height: 1; letter-spacing: -0.03em">NEP<span style="color: #A34526">.</span></span>
+</header>
+
+<div style="margin: 0 16px; height: 218px; perspective: 1100px; animation: k2-flip 0.8s cubic-bezier(.2,.8,.2,1) 0.1s both">
+<div style="position: relative; height: 100%; transform-style: preserve-3d; transition: transform 0.7s cubic-bezier(.55,0,.25,1); transform: rotateY({{ deg }}deg)">
+<section aria-label="Kartu pekerja, depan" style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; background: #163A2E; color: #FBF6EE; border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 16px; overflow: hidden">
+<svg width="150" height="150" viewBox="0 0 40 40" fill="none" stroke="rgba(251,246,238,0.10)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: -24px; bottom: -28px"><path d="M8 34V14l12-6 12 6v20"></path><path d="M8 22h24"></path><path d="M20 22v12"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 0; width: 30%; background: linear-gradient(90deg, rgba(251,246,238,0), rgba(251,246,238,0.14), rgba(251,246,238,0)); animation: k2-sheen 5s ease-in-out 1s infinite"></span>
+<div style="display: flex; align-items: center; gap: 14px">
+<span style="width: 60px; height: 60px; flex-shrink: 0; border-radius: 18px; background: rgba(251,246,238,0.12); display: flex; align-items: center; justify-content: center; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 20px; font-weight: 700">AS</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 24px; font-weight: 700; line-height: 1.15">Andi Siregar</span><span style="font-size: 14px; color: #F4EBDC">Satpam · Keamanan dan fasilitas</span></div>
+</div>
+<div style="height: 1px; background: rgba(251,246,238,0.16)"></div>
+<div style="display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 24px; row-gap: 4px">
+<span style="font-size: 13px; color: #F4EBDC">Kode</span><span style="font-size: 13px; color: #F4EBDC">Penempatan</span>
+<span style="font-size: 16px; font-weight: 600">PN-0142</span><span style="font-size: 16px; font-weight: 600">Gedung Kantor Diponegoro</span>
+</div>
+</section>
+<section aria-label="Kartu pekerja, belakang" style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); background: #F4EBDC; color: #163A2E; border: 1px solid #E7DBC8; box-sizing: border-box; border-radius: 24px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 17px; font-weight: 700">Masa berlaku</span>
+<div style="display: flex; justify-content: space-between; font-size: 15px"><span style="color: #6B6154">Kartu tanda anggota</span><span style="font-weight: 700">12 Jan 2027</span></div>
+<div style="display: flex; justify-content: space-between; font-size: 15px"><span style="color: #6B6154">Kontrak PKWT</span><span style="font-weight: 700">28 Feb 2027</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 15px"><span style="color: #6B6154">SKCK</span><span style="display: inline-flex; align-items: center; gap: 4px; font-weight: 700"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BC8420" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l2.5 1.5"></path></svg>3 Nov 2026</span></div>
+<span style="margin-top: auto; font-size: 13px; color: #6B6154">SKCK habis 36 hari lagi. Unggah yang baru lewat Berkas.</span>
+</section>
+</div>
+</div>
+<button type="button" onClick="{{ toggle }}" style="align-self: center; margin-top: 8px; height: 44px; padding: 0 16px; border: 0; background: transparent; display: flex; align-items: center; gap: 6px; font-family: inherit; font-size: 15px; font-weight: 700; color: #255F4A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 8"></path><path d="M20 4v4h-4"></path><path d="M20 12a8 8 0 0 1-14 5.3L4 16"></path><path d="M4 20v-4h4"></path></svg>{{ toggleLabel }}</button>
+
+<section style="margin: 6px 16px 0; background: #FFFFFF; border: 1px solid #E7DBC8; border-radius: 22px; padding: 6px 18px; display: flex; flex-direction: column; animation: k2-rise 0.6s ease-out 0.4s both">
+<h2 style="margin: 10px 0 2px; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 17px; font-weight: 700">HP dan keamanan</h2>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 0"><span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">HP ini</span><span style="font-size: 13px; color: #6B6154">Terdaftar atas nama kamu</span></span><span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: #255F4A; background: #F4EBDC; border-radius: 999px; padding: 6px 10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Aktif</span></div>
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #E7DBC8; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Ganti HP</span><span style="font-size: 13px; line-height: 1.4; color: #6B6154">Ajukan ke HRD. HP lama berhenti dipakai setelah disetujui.</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6154" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #E7DBC8; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">PIN absen</span><span style="font-size: 13px; color: #6B6154">Dipakai kalau foto tidak bisa</span></span><span style="font-size: 14px; font-weight: 700; color: #255F4A">Ubah</span></a>
+</section>
+
+<section style="margin: 12px 16px 0; background: #FFFFFF; border: 1px solid #E7DBC8; border-radius: 22px; padding: 6px 18px 14px; display: flex; flex-direction: column; animation: k2-rise 0.6s ease-out 0.52s both">
+<h2 style="margin: 10px 0 2px; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 17px; font-weight: 700">Penempatan dan data</h2>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 0"><span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Koordinator</span><span style="font-size: 13px; color: #6B6154">Rizky Harahap</span></span><a href="#" aria-label="Telepon Rizky Harahap" style="width: 44px; height: 44px; border-radius: 14px; background: #F4EBDC; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></a></div>
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #E7DBC8; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Persetujuan foto dan lokasi</span><span style="font-size: 13px; color: #6B6154">Versi 1.2, disetujui 2 Mar 2026</span></span><span style="font-size: 14px; font-weight: 700; color: #255F4A">Atur</span></a>
+<p style="margin: 4px 0 0; font-size: 13px; line-height: 1.45; color: #6B6154">Persetujuan bisa ditarik kapan saja. Absen tetap bisa dengan PIN.</p>
+</section>
+
+<a href="#" style="margin: 10px 16px 0; min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700">Keluar dari aplikasi</a>
+
+<nav aria-label="Menu utama" style="margin: auto 16px 16px; height: 64px; flex-shrink: 0; background: #FFFFFF; border: 1px solid #E7DBC8; border-radius: 22px; box-shadow: 0 6px 18px rgba(22,58,46,0.08); padding: 6px; box-sizing: border-box; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; animation: k2-up 0.6s cubic-bezier(.2,.8,.2,1) 0.2s both">
+<a href="L-K2-Beranda.html" aria-label="Beranda" style="display: flex; align-items: center; justify-content: center; border-radius: 16px; color: #6B6154; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"></path><path d="M6 10v10h12V10"></path></svg></a>
+<a href="L-K2-Slip.html" aria-label="Slip gaji" style="display: flex; align-items: center; justify-content: center; border-radius: 16px; color: #6B6154; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg></a>
+<a href="L-K2-Izin.html" aria-label="Izin" style="display: flex; align-items: center; justify-content: center; border-radius: 16px; color: #6B6154; text-decoration: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></svg></a>
+<a href="L-K2-Akun.html" aria-current="page" style="display: flex; align-items: center; justify-content: center; gap: 6px; border-radius: 16px; background: #163A2E; color: #FBF6EE; text-decoration: none; font-size: 13px; font-weight: 700"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>Akun</a>
+</nav>
+</div>
+</template>
+<script type="text/plain" id="dc-logic">
+class Component extends DCLogic {
+renderVals() {
+const back = !!(this.state && this.state.back);
+return {
+deg: back ? 180 : 0,
+toggleLabel: back ? 'Lihat sisi depan' : 'Lihat masa berlaku',
+toggle: () => this.setState({ back: !back })
+};
+}
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

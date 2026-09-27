@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K3 sapaan, slip gaji</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;family=Schibsted+Grotesk:wght@700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;font-family:"Onest",ui-sans-serif,system-ui,sans-serif;color:#14332A}
+a{color:#2C6A55}a:hover{color:#14332A}
+@keyframes k3-bubble{from{opacity:0;transform:scale(0.9) translateY(8px)}to{opacity:1;transform:none}}
+@keyframes k3-typing{0%{opacity:0}12%{opacity:1}85%{opacity:1}100%{opacity:0}}
+@keyframes k3-dot{0%,80%,100%{transform:translateY(0);opacity:0.4}40%{transform:translateY(-4px);opacity:1}}
+@keyframes k3-mark{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes k3-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+@keyframes k3-fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="width: 390px; height: 1000px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FFFFFF; color: #14332A; font-family: 'Onest', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 4px; padding: 12px 16px 0 8px">
+<a href="L-K3-Beranda.html" aria-label="Kembali" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #14332A"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<span style="flex-grow: 1"></span>
+<button type="button" style="display: flex; align-items: center; gap: 4px; height: 40px; padding: 0 14px; border-radius: 999px; border: 0; background: #EAF3EE; font-family: inherit; font-size: 14px; font-weight: 600; color: #14332A">Agustus 2026<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</header>
+
+<section style="padding: 12px 20px 0; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 17px; line-height: 1.4; color: #667069; animation: k3-fade 0.4s ease-out 0.05s both">Gaji Agustus kamu</span>
+<h1 style="margin: 0; font-size: 44px; font-weight: 700; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">{{ amount }}</h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.5; animation: k3-bubble 0.5s ease-out 1.1s both">sudah masuk ke rekening ••• 4417 pada 31 Agustus.</p>
+</section>
+
+<main style="padding: 20px 20px 0; display: flex; flex-direction: column; gap: 12px; font-variant-numeric: tabular-nums">
+<section style="background: #EAF3EE; border-radius: 24px; padding: 18px 20px; display: flex; flex-direction: column; animation: k3-bubble 0.5s ease-out 0.35s both">
+<div style="display: flex; align-items: center; padding-bottom: 6px"><h2 style="margin: 0; flex-grow: 1; font-size: 17px; font-weight: 700">Yang kamu dapat</h2><span style="font-size: 15px; font-weight: 700; background: #FFFFFF; border-radius: 999px; padding: 4px 10px">3.922.543</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; font-size: 15px; line-height: 1.4"><span>Gaji pokok</span><span>3.500.000</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; font-size: 15px; line-height: 1.4"><span>Tunjangan transport</span><span>200.000</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0 0; font-size: 15px; line-height: 1.4"><span>Lembur 6 jam</span><span>222.543</span></div>
+</section>
+<section style="background: #EDF1F7; border-radius: 24px; padding: 18px 20px; display: flex; flex-direction: column; animation: k3-bubble 0.5s ease-out 0.5s both">
+<div style="display: flex; align-items: center; padding-bottom: 6px"><h2 style="margin: 0; flex-grow: 1; font-size: 17px; font-weight: 700">Yang dipotong</h2><span style="font-size: 15px; font-weight: 700; background: #FFFFFF; border-radius: 999px; padding: 4px 10px">140.000</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; font-size: 15px; line-height: 1.4"><span>BPJS Kesehatan</span><span>35.000</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; font-size: 15px; line-height: 1.4"><span>BPJS hari tua</span><span>70.000</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0; font-size: 15px; line-height: 1.4"><span>BPJS pensiun</span><span>35.000</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 0 0; font-size: 15px; line-height: 1.4"><span>Pajak PPh 21</span><span>0</span></div>
+</section>
+
+<details open="" style="border: 1px solid #E5EAE7; border-radius: 20px; padding: 0 18px; animation: k3-bubble 0.4s ease-out 1.3s both">
+<summary style="min-height: 52px; display: flex; align-items: center; font-size: 15px; font-weight: 700; cursor: pointer">Kenapa pajak kamu Rp0?</summary>
+<p style="margin: 0 0 16px; font-size: 15px; line-height: 1.55; color: #667069">Penghasilan bruto Agustus di bawah batas tarif 0% untuk kategori TER A.</p>
+</details>
+<details style="border: 1px solid #E5EAE7; border-radius: 20px; padding: 0 18px; animation: k3-bubble 0.4s ease-out 1.45s both">
+<summary style="min-height: 52px; display: flex; align-items: center; font-size: 15px; font-weight: 700; cursor: pointer">Bagaimana lembur dihitung?</summary>
+<p style="margin: 0 0 16px; font-size: 15px; line-height: 1.55; color: #667069">1/173 × gaji pokok per jam. Jam pertama 1,5x, jam berikutnya 2x.</p>
+</details>
+
+<div style="display: flex; align-items: center; gap: 12px; margin-top: 4px">
+<button type="button" style="flex-grow: 1; height: 56px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 999px; background: #2C6A55; font-family: inherit; font-size: 16px; font-weight: 600; color: #FFFFFF"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"></path><path d="M7 10l5 5 5-5"></path><path d="M5 20h14"></path></svg>Simpan PDF</button>
+<a href="#" style="min-height: 44px; display: flex; align-items: center; padding: 0 8px; font-size: 15px; font-weight: 700">Tanya HRD</a>
+</div>
+</main>
+
+<nav aria-label="Menu utama" style="margin-top: auto; height: 72px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E5EAE7; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr))">
+<a href="L-K3-Beranda.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #667069; font-size: 13px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"></path><path d="M6 10v10h12V10"></path></svg>Hari ini</a>
+<a href="L-K3-Slip.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #2C6A55; font-size: 13px; font-weight: 700"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M5 2.5h14a1 1 0 0 1 1 1v18l-3.5-2-3.5 2-3.5-2L6 21.5l-2-1.2V3.5a1 1 0 0 1 1-1zM8.5 7.5v1.8h7V7.5zm0 4v1.8h7v-1.8z"></path></svg>Gaji</a>
+<a href="L-K3-Akun.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #667069; font-size: 13px; font-weight: 600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg>Saya</a>
+</nav>
+</div>
+</template>
+<script type="text/plain" id="dc-logic">
+class Component extends DCLogic {
+componentDidMount() {
+const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduce) return;
+const target = 3782543, dur = 1000, t0 = Date.now();
+const tick = () => {
+const p = Math.min(1, (Date.now() - t0) / dur);
+this.setState({ n: Math.round(target * (1 - Math.pow(1 - p, 3))) });
+if (p < 1) this._raf = requestAnimationFrame(tick);
+};
+this.setState({ n: 0 });
+this._raf = requestAnimationFrame(tick);
+}
+componentWillUnmount() {
+if (this._raf) cancelAnimationFrame(this._raf);
+}
+renderVals() {
+const n = this.state && typeof this.state.n === 'number' ? this.state.n : 3782543;
+return { amount: 'Rp' + n.toLocaleString('id-ID') };
+}
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

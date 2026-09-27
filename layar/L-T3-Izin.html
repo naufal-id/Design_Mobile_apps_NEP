@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T3 bulat ramah, ajukan izin</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;family=Nunito:wght@400..900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Nunito",ui-rounded,ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes t3-pop{0%{opacity:0;transform:scale(0.5)}60%{opacity:1;transform:scale(1.08)}80%{transform:scale(0.97)}100%{opacity:1;transform:scale(1)}}
+@keyframes t3-squish{0%{opacity:0;transform:translateY(40px) scale(0.9,1.1)}60%{opacity:1;transform:translateY(-6px) scale(1.03,0.97)}100%{opacity:1;transform:none}}
+@keyframes t3-bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-8px)}60%{transform:translateY(0)}75%{transform:translateY(-3px)}}
+@keyframes t3-blob{0%,100%{border-radius:48% 52% 55% 45% / 50% 45% 55% 50%}50%{border-radius:55% 45% 48% 52% / 45% 55% 50% 50%}}
+@keyframes t3-wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+@keyframes t3-burst{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(0.4)}}
+@keyframes t3-draw{from{stroke-dashoffset:30}to{stroke-dashoffset:0}}
+@keyframes t3-up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="width: 390px; height: 720px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Nunito', ui-rounded, ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 8px; padding: 10px 16px 0">
+<a href="L-T3-Beranda.html" aria-label="Kembali" style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #163A2E"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<h1 style="margin: 0; font-family: 'Baloo 2', sans-serif; font-size: 24px; font-weight: 700">Mau izin, Andi?</h1>
+</header>
+
+<div role="radiogroup" aria-label="Jenis izin" style="margin: 16px 16px 0; display: flex; gap: 8px">
+<sc-for list="{{ jenis }}" as="j" hint-placeholder-count="3">
+<sc-if value="{{ j.on }}" hint-placeholder-val="{{ false }}"><button type="button" role="radio" aria-checked="true" onClick="{{ j.pick }}" style="flex: 1 1 0; height: 56px; border: 0; border-radius: 999px; background: #255F4A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 6px; font-family: 'Baloo 2', sans-serif; font-size: 19px; font-weight: 700; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) both"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>{{ j.label }}</button></sc-if>
+<sc-if value="{{ j.off }}" hint-placeholder-val="{{ true }}"><button type="button" role="radio" aria-checked="false" onClick="{{ j.pick }}" style="flex: 1 1 0; height: 56px; border: 0; border-radius: 999px; background: #FFFFFF; color: #163A2E; font-family: 'Baloo 2', sans-serif; font-size: 19px; font-weight: 700">{{ j.label }}</button></sc-if>
+</sc-for>
+</div>
+
+<section style="margin: 12px 16px 0; background: #FFFFFF; border-radius: 28px; padding: 16px 18px; display: flex; flex-direction: column; gap: 14px; animation: t3-squish 0.6s cubic-bezier(.3,1.4,.5,1) 0.15s both">
+<div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 999px; background: #F4EBDC; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#255F4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></svg></span><span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 13px; font-weight: 800; color: #6B6154">Tanggal</span><span style="font-family: 'Baloo 2', sans-serif; font-size: 19px; font-weight: 700">Selasa, 29 Sep</span></span><span style="background: #F4EBDC; border-radius: 999px; padding: 6px 12px; font-size: 14px; font-weight: 800">1 hari</span></div>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 800; color: #6B6154">Ceritakan singkat</span><textarea rows="3" style="border: 0; border-radius: 20px; background: #FBF6EE; padding: 12px 14px; font-family: inherit; font-size: 16px; font-weight: 600; line-height: 1.45; color: #163A2E; resize: none">Demam sejak semalam, sudah periksa ke puskesmas.</textarea></label>
+<button type="button" style="align-self: flex-start; height: 44px; padding: 0 16px; border: 2px dashed #255F4A; border-radius: 999px; background: #FFFFFF; display: flex; align-items: center; gap: 8px; font-family: inherit; font-size: 15px; font-weight: 800; color: #255F4A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Foto surat dokter</button>
+</section>
+
+<div style="margin: 12px 16px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<div style="background: #255F4A; color: #FFFFFF; border-radius: 24px; padding: 12px 16px; display: flex; flex-direction: column; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.35s both"><span style="font-family: 'Baloo 2', sans-serif; font-size: 32px; font-weight: 800; line-height: 1">{{ sisa }}</span><span style="font-size: 13px; font-weight: 800; color: #F4EBDC">{{ sisaNote }}</span></div>
+<div style="background: #FFFFFF; border-radius: 24px; padding: 12px 16px; display: flex; flex-direction: column; gap: 2px; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.45s both"><span style="font-size: 13px; font-weight: 800; color: #6B6154">Disetujui oleh</span><span style="font-family: 'Baloo 2', sans-serif; font-size: 17px; font-weight: 700; line-height: 1.2">Rizky, lalu HRD</span></div>
+</div>
+
+<div style="padding: 14px 16px 0; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.55s both">
+<button type="button" style="width: 100%; height: 60px; border: 0; border-radius: 999px; background: #163A2E; color: #FBF6EE; font-family: 'Baloo 2', sans-serif; font-size: 20px; font-weight: 700">Kirim pengajuan</button>
+</div>
+
+<nav aria-label="Menu utama" style="margin: auto 16px 18px; height: 64px; flex-shrink: 0; border-radius: 999px; background: #FFFFFF; box-shadow: 0 6px 18px rgba(22,58,46,0.12); padding: 6px; box-sizing: border-box; display: grid; grid-template-columns: 1fr 1fr 1.3fr 1fr; gap: 4px; font-size: 14px; font-weight: 800; animation: t3-up 0.5s cubic-bezier(.3,1.4,.5,1) 0.15s both">
+<a href="L-T3-Beranda.html" style="border-radius: 999px; color: #163A2E; text-decoration: none; display: flex; align-items: center; justify-content: center">Hari ini</a>
+<a href="L-T3-Slip.html" style="border-radius: 999px; color: #163A2E; text-decoration: none; display: flex; align-items: center; justify-content: center">Gaji</a>
+<a href="L-T3-Izin.html" aria-current="page" style="border-radius: 999px; background: #163A2E; color: #FBF6EE; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; animation: t3-pop 0.45s cubic-bezier(.3,1.4,.5,1) 0.4s both"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"></rect><path d="M4 10h16"></path></svg>Izin</a>
+<a href="L-T3-Akun.html" style="border-radius: 999px; color: #163A2E; text-decoration: none; display: flex; align-items: center; justify-content: center">Akun</a>
+</nav>
+</div>
+</template>
+<script type="text/plain" id="dc-logic">
+class Component extends DCLogic {
+renderVals() {
+const picked = (this.state && this.state.jenis) || 'sakit';
+const opts = [
+{ id: 'sakit', label: 'Sakit' },
+{ id: 'izin', label: 'Izin' },
+{ id: 'cuti', label: 'Cuti' }
+];
+return {
+jenis: opts.map((o) => ({ label: o.label, on: o.id === picked, off: o.id !== picked, pick: () => this.setState({ jenis: o.id }) })),
+sisa: picked === 'cuti' ? '8' : '9',
+sisaNote: picked === 'cuti' ? 'hari cuti setelah ini' : 'hari cuti tersisa'
+};
+}
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

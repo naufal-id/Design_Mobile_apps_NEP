@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K8 map berkas, akun</title>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;family=Schibsted+Grotesk:wght@800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes k8-stack{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:none}}
+@keyframes k8-tab{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes k8-paper{from{transform:translateY(150px)}to{transform:none}}
+@keyframes k8-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes k8-scan{from{transform:translateY(0)}to{transform:translateY(170px)}}
+@keyframes k8-pulse{0%{box-shadow:0 0 0 0 rgba(188,132,32,0.5)}70%,100%{box-shadow:0 0 0 10px rgba(188,132,32,0)}}
+@keyframes k8-up{from{transform:translateY(100%)}to{transform:none}}
+@keyframes k8-draw{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width: 390px; height: 820px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif">
+
+<header style="padding: 18px 20px 0">
+<h1 style="margin: 0; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 28px; font-weight: 800">Akun</h1>
+</header>
+
+<section aria-label="Map pekerja" style="margin: 14px 16px 0; display: flex; flex-direction: column; animation: k8-stack 0.6s cubic-bezier(.2,.8,.2,1) 0.05s both">
+<span style="align-self: flex-start; height: 36px; box-sizing: border-box; padding: 0 14px; background: #163A2E; color: #FBF6EE; border-radius: 12px 12px 0 0; display: flex; align-items: center; gap: 6px; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 15px; font-weight: 800; animation: k8-tab 0.4s ease-out 0.25s both">PN-0142</span>
+<div style="background: #163A2E; color: #FBF6EE; border-radius: 0 20px 20px 20px; padding: 16px 18px; display: flex; align-items: center; gap: 14px">
+<span style="width: 56px; height: 56px; flex-shrink: 0; border-radius: 16px; background: #F4EBDC; color: #163A2E; display: flex; align-items: center; justify-content: center; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 20px; font-weight: 800">AS</span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Karla', 'Public Sans', sans-serif; font-size: 22px; font-weight: 800">Andi Siregar</span><span style="font-size: 14px; color: #F4EBDC">Satpam · Gedung Kantor Diponegoro</span><span style="font-size: 13px; color: #F4EBDC">Koordinator: Rizky Harahap</span></span>
+</div>
+</section>
+
+<section style="margin: 14px 16px 0; background: #FFFFFF; border: 1px solid #E7DBC8; border-radius: 16px; padding: 2px 16px; animation: k8-rise 0.45s ease-out 0.35s both">
+<a href="L-K8-Riwayat.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Map absen</span><span style="font-size: 13px; line-height: 1.4; color: #6B6154">Riwayat per minggu, 22 hadir bulan ini</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6154" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="L-K8-Izin.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #E7DBC8; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Ajukan izin atau cuti</span><span style="font-size: 13px; line-height: 1.4; color: #6B6154">Sisa cuti 9 hari</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6154" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="L-K8-Berkas.html" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #E7DBC8; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Berkas saya</span><span style="font-size: 13px; line-height: 1.4; color: #6B6154">Kontrak, SKCK, BPJS, persetujuan</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6154" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+</section>
+<section style="margin: 12px 16px 0; background: #FFFFFF; border: 1px solid #E7DBC8; border-radius: 16px; padding: 2px 16px; animation: k8-rise 0.45s ease-out 0.45s both">
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 0; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">HP ini</span><span style="font-size: 13px; line-height: 1.4; color: #6B6154">Terdaftar atas nama kamu</span></span><span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: #255F4A"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Aktif</span></div>
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #E7DBC8; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Ganti HP</span><span style="font-size: 13px; line-height: 1.4; color: #6B6154">Ajukan ke HRD, HP lama berhenti setelah disetujui</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6154" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #E7DBC8; text-decoration: none; color: #163A2E"><span style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">PIN absen</span><span style="font-size: 13px; line-height: 1.4; color: #6B6154">Cadangan kalau foto gagal</span></span><span style="font-size: 14px; font-weight: 700; color: #255F4A">Atur</span></a>
+</section>
+
+<a href="#" style="align-self: center; min-height: 44px; margin-top: 6px; display: flex; align-items: center; font-size: 15px; font-weight: 700">Keluar dari aplikasi</a>
+
+<nav aria-label="Menu utama" style="margin-top: auto; height: 68px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E7DBC8; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); animation: k8-up 0.5s cubic-bezier(.2,.8,.2,1) 0.1s both">
+<a href="L-K8-Beranda.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"></path></svg></span>Map</a>
+<a href="L-K8-Slip.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg></span>Gaji</a>
+<a href="L-K8-Berkas.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path></svg></span>Berkas</a>
+<a href="L-K8-Akun.html" aria-current="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #163A2E; font-size: 13px; font-weight: 800"><span style="width: 52px; height: 28px; border-radius: 8px 8px 0 0; background: #163A2E; color: #FBF6EE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></span>Akun</a>
+</nav>
+</div>
+</div>
+<script src="dc-lite.js"></script>
+</body>
+</html>

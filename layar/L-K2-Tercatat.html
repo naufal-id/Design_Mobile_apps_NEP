@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K2 kartu pekerja, absen tercatat</title>
+<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes k2-turn{0%{transform:rotateY(0)}100%{transform:rotateY(180deg)}}
+@keyframes k2-lift{0%{transform:translateY(0) scale(1)}45%{transform:translateY(-14px) scale(1.03)}100%{transform:translateY(0) scale(1)}}
+@keyframes k2-rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes k2-draw{from{stroke-dashoffset:30}to{stroke-dashoffset:0}}
+@keyframes k2-dot{0%,100%{opacity:1}50%{opacity:0.35}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 4px; padding: 12px 20px 12px 8px">
+<a href="L-K2-Beranda.html" aria-label="Tutup" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #163A2E"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></a>
+<span style="flex-grow: 1; font-size: 15px; font-weight: 600; color: #6B6154">Absen masuk</span>
+</header>
+
+<div style="margin: 8px 16px 0; height: 250px; perspective: 1100px; animation: k2-lift 0.9s ease-in-out 0.5s both">
+<div style="position: relative; height: 100%; transform-style: preserve-3d; transform: rotateY(180deg); animation: k2-turn 0.9s cubic-bezier(.55,0,.25,1) 0.5s both">
+
+<section aria-hidden="true" style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; background: #163A2E; color: #FBF6EE; border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 16px; overflow: hidden">
+<svg width="150" height="150" viewBox="0 0 40 40" fill="none" stroke="rgba(251,246,238,0.10)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: -24px; bottom: -28px"><path d="M8 34V14l12-6 12 6v20"></path><path d="M8 22h24"></path><path d="M20 22v12"></path></svg>
+<div style="display: flex; align-items: center; gap: 14px">
+<span style="width: 60px; height: 60px; flex-shrink: 0; border-radius: 18px; background: rgba(251,246,238,0.12); display: flex; align-items: center; justify-content: center; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 20px; font-weight: 700">AS</span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 24px; font-weight: 700; line-height: 1.15">Andi Siregar</span><span style="font-size: 14px; color: #F4EBDC">Satpam · Keamanan dan fasilitas</span></div>
+</div>
+<div style="height: 1px; background: rgba(251,246,238,0.16)"></div>
+<div style="display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 24px; row-gap: 4px">
+<span style="font-size: 13px; color: #F4EBDC">Kode</span><span style="font-size: 13px; color: #F4EBDC">Penempatan</span>
+<span style="font-size: 16px; font-weight: 600">PN-0142</span><span style="font-size: 16px; font-weight: 600">Gedung Kantor Diponegoro</span>
+</div>
+</section>
+
+<section style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); background: #255F4A; color: #FFFFFF; border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 6px; overflow: hidden">
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="width: 40px; height: 40px; border-radius: 14px; background: #FBF6EE; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#255F4A" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-dasharray="30" style="animation: k2-draw 0.45s ease-out 1.35s both"></path></svg></span>
+<h1 style="margin: 0; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 22px; font-weight: 700">Absen tercatat</h1>
+</div>
+<span style="margin-top: 8px; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums">06.52</span>
+<span style="font-size: 15px; color: #FBF6EE">Senin, 28 Sep · Gedung Kantor Diponegoro</span>
+<div style="margin-top: auto; display: flex; justify-content: space-between; border-top: 1px solid rgba(251,246,238,0.2); padding-top: 10px; font-size: 13px"><span style="color: #F4EBDC">Kode absen</span><span style="font-weight: 700; letter-spacing: 0.04em">AB-7F3C-91D2</span></div>
+</section>
+</div>
+</div>
+
+<section style="margin: 20px 16px 0; background: #FFFFFF; border: 1px solid #E7DBC8; border-radius: 22px; padding: 16px 18px; display: flex; flex-direction: column; gap: 12px; animation: k2-rise 0.5s ease-out 1.4s both">
+<h2 style="margin: 0; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 17px; font-weight: 700">Status kirim</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="height: 6px; border-radius: 999px; background: #255F4A"></span><span style="font-size: 13px; font-weight: 700">Aman di HP</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="height: 6px; border-radius: 999px; background: #BC8420; animation: k2-dot 1.4s ease-in-out 1.9s infinite"></span><span style="font-size: 13px; font-weight: 700">Menunggu sinyal</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="height: 6px; border-radius: 999px; background: #E7DBC8"></span><span style="font-size: 13px; font-weight: 600; color: #6B6154">Diterima server</span></div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: #6B6154">Jam resmi dicatat server begitu absen terkirim. Kamu tidak perlu absen ulang.</p>
+</section>
+
+<div role="status" style="margin: 12px 16px 0; display: flex; align-items: center; gap: 12px; background: #F4EBDC; border-radius: 16px; padding: 12px 14px; animation: k2-rise 0.5s ease-out 1.5s both"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#255F4A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"></path></svg><span style="font-size: 14px; line-height: 1.45">Selamat bertugas, Andi. Shift pagi mulai 8 menit lagi.</span></div>
+
+<div style="margin-top: auto; padding: 16px 16px 24px">
+<a href="L-K2-Beranda.html" style="height: 56px; border-radius: 16px; background: #255F4A; color: #FFFFFF; text-decoration: none; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 700">Kembali ke beranda</a>
+</div>
+</div>
+</div>
+<script src="dc-lite.js"></script>
+</body>
+</html>

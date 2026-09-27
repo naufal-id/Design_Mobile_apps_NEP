@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K1 Sampul hijau, ringkasan alur</title>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@700;800&amp;family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{background:#E5EAE7;color:#14332A;font-family:'Public Sans',system-ui,sans-serif}
+body{margin:0}
+a{color:#2C6A55}
+.top{position:sticky;left:0;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding:24px 32px 8px;max-width:100vw}
+.top h1{margin:0;font-family:'Schibsted Grotesk',system-ui,sans-serif;font-size:32px;font-weight:800;letter-spacing:-0.02em;line-height:1.1}
+.top p{margin:0;font-size:15px;color:#667069}
+.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:15px;font-weight:600;text-decoration:none}
+.tabs{margin-left:auto;display:flex;gap:4px;padding:4px;border-radius:999px;background:#FFFFFF}
+.tabs button{height:40px;padding:0 18px;border:0;border-radius:999px;background:transparent;color:#14332A;font:600 15px/1 'Public Sans',system-ui,sans-serif;cursor:pointer}
+.tabs button[aria-selected="true"]{background:#14332A;color:#FFFFFF}
+.hint{padding:0 32px 8px;margin:0;font-size:14px;color:#667069}
+.row{display:flex;align-items:flex-start;gap:48px;width:max-content;padding:24px 32px 48px}
+.col{margin:0;display:flex;flex-direction:column;gap:12px;flex-shrink:0;scroll-margin:32px}
+.col figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:16px;font-weight:600;color:#667069}
+.col figcaption button{height:32px;padding:0 12px;border:1px solid #667069;border-radius:999px;background:transparent;color:#14332A;font:600 13px/1 'Public Sans',system-ui,sans-serif;cursor:pointer}
+.col iframe,.hp iframe{display:block;width:390px;border:0;border-radius:24px;background:#FFFFFF;box-shadow:0 14px 36px rgba(0,0,0,0.16)}
+.col.tuju iframe{outline:4px solid #2C6A55;outline-offset:6px;animation:tuju 1.2s ease-out}
+@keyframes tuju{0%{outline-color:#2C6A55;transform:scale(0.98)}40%{transform:scale(1)}100%{outline-color:#2C6A55}}
+.hp{display:flex;align-items:flex-start;gap:40px;padding:24px 32px 48px;flex-wrap:wrap}
+.hp ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;min-width:220px}
+.hp ol button{width:100%;min-height:44px;padding:0 16px;border:0;border-radius:14px;background:#FFFFFF;color:#14332A;text-align:left;font:600 15px/1.2 'Public Sans',system-ui,sans-serif;cursor:pointer}
+.hp ol button[aria-current="true"]{background:#14332A;color:#FFFFFF}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top">
+<a class="back" href="index.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Semua alur</a>
+<h1>K1 · Sampul hijau</h1>
+<p>7 layar, palet 2d</p>
+<div class="tabs" role="tablist" aria-label="Tampilan">
+<button type="button" role="tab" aria-selected="true" data-mode="ringkas">Semua layar</button>
+<button type="button" role="tab" aria-selected="false" data-mode="hp">Coba sebagai HP</button>
+</div>
+</header>
+<main>
+<section id="ringkas" aria-label="Semua layar">
+<p class="hint">Klik tombol di layar mana pun. Kolom tujuan akan disorot dan animasinya diputar ulang.</p>
+<div class="row">
+<figure class="col" data-file="L-K1-Beranda.html">
+<figcaption><span>1 · Beranda</span><button type="button" aria-label="Ulangi animasi Beranda">Ulangi</button></figcaption>
+<iframe name="nep-ringkas" src="layar/L-K1-Beranda.html" title="Beranda" style="height: 844px" loading="lazy"></iframe>
+</figure>
+<figure class="col" data-file="L-K1-Absen.html">
+<figcaption><span>2 · Absen</span><button type="button" aria-label="Ulangi animasi Absen">Ulangi</button></figcaption>
+<iframe name="nep-ringkas" src="layar/L-K1-Absen.html" title="Absen" style="height: 844px" loading="lazy"></iframe>
+</figure>
+<figure class="col" data-file="L-K1-Tercatat.html">
+<figcaption><span>3 · Tercatat</span><button type="button" aria-label="Ulangi animasi Tercatat">Ulangi</button></figcaption>
+<iframe name="nep-ringkas" src="layar/L-K1-Tercatat.html" title="Tercatat" style="height: 844px" loading="lazy"></iframe>
+</figure>
+<figure class="col" data-file="L-K1-Riwayat.html">
+<figcaption><span>4 · Riwayat</span><button type="button" aria-label="Ulangi animasi Riwayat">Ulangi</button></figcaption>
+<iframe name="nep-ringkas" src="layar/L-K1-Riwayat.html" title="Riwayat" style="height: 860px" loading="lazy"></iframe>
+</figure>
+<figure class="col" data-file="L-K1-Izin.html">
+<figcaption><span>5 · Izin</span><button type="button" aria-label="Ulangi animasi Izin">Ulangi</button></figcaption>
+<iframe name="nep-ringkas" src="layar/L-K1-Izin.html" title="Izin" style="height: 980px" loading="lazy"></iframe>
+</figure>
+<figure class="col" data-file="L-K1-Slip.html">
+<figcaption><span>6 · Slip gaji</span><button type="button" aria-label="Ulangi animasi Slip gaji">Ulangi</button></figcaption>
+<iframe name="nep-ringkas" src="layar/L-K1-Slip.html" title="Slip gaji" style="height: 920px" loading="lazy"></iframe>
+</figure>
+<figure class="col" data-file="L-K1-Akun.html">
+<figcaption><span>7 · Akun</span><button type="button" aria-label="Ulangi animasi Akun">Ulangi</button></figcaption>
+<iframe name="nep-ringkas" src="layar/L-K1-Akun.html" title="Akun" style="height: 1080px" loading="lazy"></iframe>
+</figure>
+</div>
+</section>
+<section id="hp" class="hp" aria-label="Coba sebagai HP" hidden>
+<ol>
+<li><button type="button" data-file="L-K1-Beranda.html" aria-current="true">1 · Beranda</button></li>
+<li><button type="button" data-file="L-K1-Absen.html" aria-current="false">2 · Absen</button></li>
+<li><button type="button" data-file="L-K1-Tercatat.html" aria-current="false">3 · Tercatat</button></li>
+<li><button type="button" data-file="L-K1-Riwayat.html" aria-current="false">4 · Riwayat</button></li>
+<li><button type="button" data-file="L-K1-Izin.html" aria-current="false">5 · Izin</button></li>
+<li><button type="button" data-file="L-K1-Slip.html" aria-current="false">6 · Slip gaji</button></li>
+<li><button type="button" data-file="L-K1-Akun.html" aria-current="false">7 · Akun</button></li>
+</ol>
+<iframe id="hp-frame" src="layar/L-K1-Beranda.html" title="Prototipe K1 Sampul hijau" style="height: 844px"></iframe>
+</section>
+</main>
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var tabs = document.querySelectorAll('.tabs button');
+  var views = { ringkas: document.getElementById('ringkas'), hp: document.getElementById('hp') };
+  var hpFrame = document.getElementById('hp-frame');
+  var hpList = document.querySelectorAll('.hp ol button');
+  function show(mode) {
+    tabs.forEach(function (t) { t.setAttribute('aria-selected', String(t.dataset.mode === mode)); });
+    Object.keys(views).forEach(function (k) { views[k].hidden = k !== mode; });
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.mode); }); });
+  function replay(col) {
+    var f = col.querySelector('iframe');
+    f.src = f.getAttribute('src');
+  }
+  document.querySelectorAll('.col figcaption button').forEach(function (b) {
+    b.addEventListener('click', function () { replay(b.closest('.col')); });
+  });
+  hpList.forEach(function (b) {
+    b.addEventListener('click', function () { hpFrame.src = 'layar/' + b.dataset.file; });
+  });
+  window.addEventListener('message', function (e) {
+    var d = e.data;
+    if (!d || typeof d !== 'object') return;
+    if (d.nep === 'nav') {
+      var col = document.querySelector('.col[data-file="' + d.to + '"]');
+      if (!col) return;
+      col.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+      replay(col);
+      col.classList.remove('tuju');
+      void col.offsetWidth;
+      col.classList.add('tuju');
+      setTimeout(function () { col.classList.remove('tuju'); }, 1600);
+    } else if (d.nep === 'size' && e.source === hpFrame.contentWindow) {
+      if (d.h > 0) hpFrame.style.height = d.h + 'px';
+      hpList.forEach(function (b) { b.setAttribute('aria-current', String(b.dataset.file === d.file)); });
+    }
+  });
+})();
+</script>
+</body>
+</html>

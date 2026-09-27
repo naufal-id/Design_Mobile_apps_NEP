@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K2 kartu pekerja, absen masuk</title>
+<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes k2-flip{from{opacity:0;transform:perspective(900px) rotateY(-70deg) translateX(-40px)}to{opacity:1;transform:perspective(900px) rotateY(0)}}
+@keyframes k2-sheen{0%{transform:translateX(-140%) skewX(-18deg)}35%,100%{transform:translateX(420%) skewX(-18deg)}}
+@keyframes k2-scan{from{transform:translateY(0)}to{transform:translateY(226px)}}
+@keyframes k2-rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes k2-draw{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 4px; padding: 12px 20px 12px 8px">
+<a href="L-K2-Beranda.html" aria-label="Kembali" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #163A2E"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<h1 style="margin: 0; flex-grow: 1; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 22px; font-weight: 700">Absen masuk</h1>
+<span style="font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums">06.52</span>
+</header>
+
+<section aria-label="Pratinjau kamera depan" style="position: relative; margin: 0 16px; height: 400px; border-radius: 24px; overflow: hidden; background: #163A2E; color: #FBF6EE; display: flex; flex-direction: column; align-items: center; padding: 22px 20px 18px; box-sizing: border-box; animation: k2-flip 0.8s cubic-bezier(.2,.8,.2,1) 0.1s both">
+<svg width="150" height="150" viewBox="0 0 40 40" fill="none" stroke="rgba(251,246,238,0.10)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: -24px; bottom: 30px"><path d="M8 34V14l12-6 12 6v20"></path><path d="M8 22h24"></path><path d="M20 22v12"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 0; width: 30%; background: linear-gradient(90deg, rgba(251,246,238,0), rgba(251,246,238,0.14), rgba(251,246,238,0)); animation: k2-sheen 5s ease-in-out 1s infinite"></span>
+<div style="position: relative; width: 190px; height: 250px; border-radius: 50%; border: 2.5px dashed rgba(251,246,238,0.7); overflow: hidden; display: flex; align-items: flex-end; justify-content: center">
+<svg width="160" height="190" viewBox="0 0 170 200" aria-hidden="true"><circle cx="85" cy="78" r="44" fill="rgba(251,246,238,0.14)"></circle><path d="M8 200c6-46 38-70 77-70s71 24 77 70z" fill="rgba(251,246,238,0.14)"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: 12px; left: 14px; right: 14px; height: 2px; border-radius: 2px; background: #FBF6EE; box-shadow: 0 0 14px 2px rgba(251,246,238,0.6); animation: k2-scan 1.8s ease-in-out 0.9s infinite alternate"></span>
+</div>
+<span style="margin-top: 14px; font-size: 15px; font-weight: 600">Posisikan wajah di dalam bingkai</span>
+<div style="margin-top: auto; align-self: stretch; display: flex; align-items: center; gap: 10px; border-top: 1px solid rgba(251,246,238,0.16); padding-top: 12px">
+<span style="width: 36px; height: 36px; border-radius: 12px; background: rgba(251,246,238,0.12); display: flex; align-items: center; justify-content: center; font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 14px; font-weight: 700">AS</span>
+<span style="display: flex; flex-direction: column"><span style="font-family: 'Gantari', 'Public Sans', sans-serif; font-size: 16px; font-weight: 700">Andi Siregar</span><span style="font-size: 13px; color: #F4EBDC">PN-0142 · Gedung Kantor Diponegoro</span></span>
+</div>
+</section>
+
+<section style="margin: 14px 16px 0; background: #FFFFFF; border: 1px solid #E7DBC8; border-radius: 22px; padding: 4px 16px; display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; animation: k2-rise 0.45s ease-out 0.6s both"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#255F4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-dasharray="24" style="animation: k2-draw 0.4s ease-out 0.85s both"></path></svg><span style="width: 80px; font-size: 14px; color: #6B6154">Lokasi</span><span style="font-size: 15px; font-weight: 600">Di dalam area, 38 m</span></div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid #E7DBC8; animation: k2-rise 0.45s ease-out 0.72s both"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#255F4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-dasharray="24" style="animation: k2-draw 0.4s ease-out 1s both"></path></svg><span style="width: 80px; font-size: 14px; color: #6B6154">Perangkat</span><span style="font-size: 15px; font-weight: 600">Terdaftar atas nama kamu</span></div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid #E7DBC8; animation: k2-rise 0.45s ease-out 0.84s both"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BC8420" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20v-3M9 20v-6M14 20v-9M19 20V5"></path><path d="M3 4l18 16"></path></svg><span style="width: 80px; font-size: 14px; color: #6B6154">Sinyal</span><span style="font-size: 15px; font-weight: 600">Tidak ada, disimpan di HP</span></div>
+</section>
+
+<div style="margin-top: auto; padding: 12px 20px 24px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 12px">
+<a href="L-K2-Beranda.html" style="min-height: 44px; display: flex; align-items: center; font-size: 15px; font-weight: 600">Batal</a>
+<a href="L-K2-Tercatat.html" aria-label="Ambil foto dan simpan absen" style="width: 78px; height: 78px; box-sizing: border-box; border-radius: 26px; border: 3px solid #255F4A; padding: 5px; display: flex"><span style="flex-grow: 1; border-radius: 20px; background: #255F4A; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg></span></a>
+<a href="#" style="justify-self: end; min-height: 44px; display: flex; align-items: center; font-size: 15px; font-weight: 600">Pakai PIN</a>
+</div>
+</div>
+</div>
+<script src="dc-lite.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K8 map berkas, ajukan izin</title>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;600;700;800&amp;family=Public+Sans:wght@400;500;600;700&amp;family=Schibsted+Grotesk:wght@800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FBF6EE;font-family:"Public Sans",ui-sans-serif,system-ui,sans-serif;color:#163A2E}
+a{color:#255F4A}a:hover{color:#163A2E}
+@keyframes k8-stack{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:none}}
+@keyframes k8-tab{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes k8-paper{from{transform:translateY(150px)}to{transform:none}}
+@keyframes k8-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes k8-scan{from{transform:translateY(0)}to{transform:translateY(170px)}}
+@keyframes k8-pulse{0%{box-shadow:0 0 0 0 rgba(188,132,32,0.5)}70%,100%{box-shadow:0 0 0 10px rgba(188,132,32,0)}}
+@keyframes k8-up{from{transform:translateY(100%)}to{transform:none}}
+@keyframes k8-draw{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="width: 390px; height: 720px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FBF6EE; color: #163A2E; font-family: 'Public Sans', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 4px; padding: 12px 20px 0 8px">
+<a href="L-K8-Akun.html" aria-label="Kembali" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #163A2E"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<h1 style="margin: 0; flex-grow: 1; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 24px; font-weight: 800">Ajukan izin</h1>
+</header>
+
+<section aria-label="Formulir izin" style="margin: 16px 16px 0; display: flex; flex-direction: column; animation: k8-stack 0.6s cubic-bezier(.2,.8,.2,1) 0.05s both">
+<div role="radiogroup" aria-label="Jenis izin" style="display: flex; gap: 4px; align-items: flex-end">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+<sc-if value="{{ t.on }}" hint-placeholder-val="{{ false }}"><button type="button" role="radio" aria-checked="true" onClick="{{ t.pick }}" style="height: 44px; padding: 0 20px; border: 0; border-radius: 12px 12px 0 0; background: #163A2E; color: #FBF6EE; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 16px; font-weight: 800; animation: k8-tab 0.3s ease-out both">{{ t.label }}</button></sc-if>
+<sc-if value="{{ t.off }}" hint-placeholder-val="{{ true }}"><button type="button" role="radio" aria-checked="false" onClick="{{ t.pick }}" style="height: 38px; padding: 0 18px; border: 0; border-radius: 12px 12px 0 0; background: #F4EBDC; color: #163A2E; font-family: 'Karla', 'Public Sans', sans-serif; font-size: 16px; font-weight: 700">{{ t.label }}</button></sc-if>
+</sc-for>
+</div>
+<div style="background: #163A2E; border-radius: 0 20px 20px 20px; padding: 12px">
+<article style="background: #FFFFFF; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 14px; animation: k8-paper 0.7s cubic-bezier(.2,.8,.2,1) 0.3s both">
+<div style="display: flex; gap: 8px">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #6B6154">Tanggal</span><button type="button" style="height: 48px; border: 1px solid #E7DBC8; border-radius: 12px; background: #FBF6EE; padding: 0 12px; display: flex; align-items: center; gap: 8px; font-family: inherit; font-size: 15px; font-weight: 700; color: #163A2E"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#255F4A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></svg>Sel, 29 Sep 2026</button></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #6B6154">Lama</span><span style="height: 48px; box-sizing: border-box; border-radius: 12px; background: #F4EBDC; padding: 0 14px; display: flex; align-items: center; font-size: 15px; font-weight: 700">1 hari</span></div>
+</div>
+<label style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 13px; font-weight: 700; color: #6B6154">Keterangan</span><textarea rows="3" style="border: 1px solid #E7DBC8; border-radius: 12px; padding: 10px 12px; font-family: inherit; font-size: 15px; line-height: 1.45; color: #163A2E; resize: none; background: #FBF6EE">Demam sejak semalam, sudah periksa ke puskesmas.</textarea></label>
+<sc-if value="{{ isSakit }}" hint-placeholder-val="{{ true }}"><div style="display: flex; align-items: center; gap: 12px; border: 1.5px dashed #BC8420; border-radius: 12px; padding: 10px 12px; animation: k8-rise 0.3s ease-out both"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#163A2E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path></svg><span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">Surat dokter</span><span style="font-size: 13px; color: #6B6154">Masuk ke Berkas saya setelah disetujui</span></span><button type="button" style="height: 40px; padding: 0 14px; border: 0; border-radius: 10px; background: #255F4A; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 700">Foto</button></div></sc-if>
+<sc-if value="{{ notSakit }}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #6B6154">Tidak perlu lampiran untuk jenis ini.</p></sc-if>
+<p style="margin: 0; font-size: 14px; line-height: 1.45"><strong style="font-weight: 700">Rizky Harahap</strong> menyetujui dulu, lalu HRD. {{ sisa }}</p>
+</article>
+</div>
+</section>
+
+<div style="padding: 14px 16px 0; display: flex; flex-direction: column; gap: 8px; animation: k8-rise 0.4s ease-out 0.6s both">
+<button type="button" style="height: 56px; border: 0; border-radius: 14px; background: #255F4A; color: #FFFFFF; font-family: inherit; font-size: 17px; font-weight: 700">Kirim pengajuan</button>
+<span style="align-self: center; font-size: 14px; color: #6B6154">Sebelumnya: Izin, Rab 16 Sep, disetujui</span>
+</div>
+
+<nav aria-label="Menu utama" style="margin-top: auto; height: 68px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E7DBC8; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); animation: k8-up 0.5s cubic-bezier(.2,.8,.2,1) 0.1s both">
+<a href="L-K8-Beranda.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"></path></svg></span>Map</a>
+<a href="L-K8-Slip.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg></span>Gaji</a>
+<a href="L-K8-Berkas.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path></svg></span>Berkas</a>
+<a href="L-K8-Akun.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #6B6154; font-size: 13px; font-weight: 600"><span style="height: 28px; display: flex; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></span>Akun</a>
+</nav>
+</div>
+</template>
+<script type="text/plain" id="dc-logic">
+class Component extends DCLogic {
+renderVals() {
+const picked = (this.state && this.state.jenis) || 'sakit';
+const opts = [
+{ id: 'sakit', label: 'Sakit' },
+{ id: 'izin', label: 'Izin' },
+{ id: 'cuti', label: 'Cuti' }
+];
+return {
+tabs: opts.map((o) => ({ label: o.label, on: o.id === picked, off: o.id !== picked, pick: () => this.setState({ jenis: o.id }) })),
+isSakit: picked === 'sakit',
+notSakit: picked !== 'sakit',
+sisa: picked === 'cuti' ? 'Sisa cuti jadi 8 hari setelah pengajuan ini.' : 'Sisa cuti tahunan 9 hari.'
+};
+}
+}
+</script>
+<script src="dc-lite.js"></script>
+</body>
+</html>

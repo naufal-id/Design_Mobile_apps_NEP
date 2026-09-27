@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K3 sapaan, absen tercatat</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF;font-family:"Onest",ui-sans-serif,system-ui,sans-serif;color:#14332A}
+a{color:#2C6A55}a:hover{color:#14332A}
+@keyframes k3-send{from{opacity:0;transform:translateY(40px) scale(0.9)}to{opacity:1;transform:none}}
+@keyframes k3-bubble{from{opacity:0;transform:scale(0.85) translateY(8px)}to{opacity:1;transform:none}}
+@keyframes k3-typing{0%{opacity:0}12%{opacity:1}85%{opacity:1}100%{opacity:0}}
+@keyframes k3-dot{0%,80%,100%{transform:translateY(0);opacity:0.4}40%{transform:translateY(-4px);opacity:1}}
+@keyframes k3-tick{from{stroke-dashoffset:24}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<style>body{display:flex;justify-content:center}#dc-root{flex-shrink:0}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #FFFFFF; color: #14332A; font-family: 'Onest', ui-sans-serif, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; gap: 4px; padding: 12px 16px 0 8px">
+<a href="L-K3-Beranda.html" aria-label="Kembali" style="width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: #14332A"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<h1 style="margin: 0; flex-grow: 1; font-size: 17px; font-weight: 700">Absen masuk</h1>
+</header>
+
+<section aria-label="Percakapan absen" style="padding: 16px 20px 0; display: flex; flex-direction: column; gap: 10px">
+<div style="align-self: flex-end; max-width: 78%; background: #2C6A55; color: #FFFFFF; border-radius: 20px 6px 20px 20px; padding: 8px; display: flex; flex-direction: column; gap: 8px; transform-origin: 100% 100%; animation: k3-send 0.5s cubic-bezier(.2,.8,.2,1) 0.1s both">
+<span aria-hidden="true" style="height: 140px; width: 200px; border-radius: 14px; background: rgba(234,243,238,0.18); display: flex; align-items: flex-end; justify-content: center; overflow: hidden"><svg width="120" height="120" viewBox="0 0 170 200"><circle cx="85" cy="80" r="46" fill="rgba(234,243,238,0.35)"></circle><path d="M4 200c6-48 40-72 81-72s75 24 81 72z" fill="rgba(234,243,238,0.35)"></path></svg></span>
+<span style="display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 6px 2px; font-size: 15px; font-weight: 600">Absen masuk<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 500; color: #EAF3EE">06.52<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-dasharray="24" style="animation: k3-tick 0.35s ease-out 0.6s both"></path></svg></span></span>
+</div>
+
+<div style="position: relative; align-self: flex-start; max-width: 86%; display: flex; gap: 8px; align-items: flex-end">
+<span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 999px; background: #14332A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700">NEP</span>
+<div style="position: relative">
+<span aria-hidden="true" style="position: absolute; left: 0; top: 0; display: flex; gap: 4px; background: #EAF3EE; border-radius: 20px 20px 20px 6px; padding: 14px 16px; animation: k3-typing 0.8s ease-out 0.7s both"><span style="width: 7px; height: 7px; border-radius: 999px; background: #2C6A55; animation: k3-dot 0.9s ease-in-out infinite"></span><span style="width: 7px; height: 7px; border-radius: 999px; background: #2C6A55; animation: k3-dot 0.9s ease-in-out 0.15s infinite"></span><span style="width: 7px; height: 7px; border-radius: 999px; background: #2C6A55; animation: k3-dot 0.9s ease-in-out 0.3s infinite"></span></span>
+<div style="background: #EAF3EE; border-radius: 20px 20px 20px 6px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; transform-origin: 0 100%; animation: k3-bubble 0.4s ease-out 1.5s both"><span style="font-size: 16px; font-weight: 700">Tercatat, Andi.</span><span style="font-size: 15px; line-height: 1.45">Absen masuk 06.52 di Gedung Kantor Diponegoro. Shift mulai 8 menit lagi.</span></div>
+</div>
+</div>
+
+<div style="align-self: flex-start; margin-left: 40px; max-width: 78%; background: #EDF1F7; border-radius: 20px 20px 20px 6px; padding: 12px 14px; font-size: 15px; line-height: 1.45; transform-origin: 0 100%; animation: k3-bubble 0.4s ease-out 1.9s both">Belum ada sinyal, jadi absen aman di HP dulu. Nanti terkirim sendiri, kamu tidak perlu absen ulang.</div>
+
+<div style="align-self: flex-start; margin-left: 40px; border: 1px solid #E5EAE7; border-radius: 16px; padding: 10px 14px; display: flex; flex-direction: column; gap: 6px; min-width: 220px; transform-origin: 0 100%; animation: k3-bubble 0.4s ease-out 2.3s both">
+<div style="display: flex; justify-content: space-between; gap: 16px; font-size: 14px"><span style="color: #667069">Kode absen</span><span style="font-weight: 700; letter-spacing: 0.03em">AB-7F3C-91D2</span></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; font-size: 14px"><span style="color: #667069">Status</span><span style="display: inline-flex; align-items: center; gap: 4px; font-weight: 700; color: #4A6FA5"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M11 18h2"></path></svg>Di HP</span></div>
+</div>
+</section>
+
+<div role="group" aria-label="Balasan cepat" style="margin-top: auto; padding: 16px 20px 24px; display: flex; flex-wrap: wrap; gap: 8px; animation: k3-bubble 0.4s ease-out 2.6s both">
+<a href="L-K3-Beranda.html" style="height: 48px; padding: 0 18px; border-radius: 999px; background: #2C6A55; color: #FFFFFF; text-decoration: none; display: flex; align-items: center; font-size: 15px; font-weight: 600">Kembali ke hari ini</a>
+<a href="L-K3-Riwayat.html" style="height: 48px; box-sizing: border-box; padding: 0 18px; border-radius: 999px; border: 1.5px solid #2C6A55; text-decoration: none; display: flex; align-items: center; font-size: 15px; font-weight: 600">Lihat riwayat</a>
+</div>
+</div>
+</div>
+<script src="dc-lite.js"></script>
+</body>
+</html>
